@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapeleng</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            background-color: #1e2d45;
+            width: 20%; /* Set fixed width */
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Add a class for the logo */
+        .sidebar .logo {
+            width: 300px; /* Adjust the size as necessary */
+            margin-bottom: 100px;
+        }
+
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 0;
+            font-size: 18px;
+        }
+
+        .sidebar .button {
+            background-color: #d97950;
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .sidebar p {
+            text-align: center;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            flex-grow: 1; /* Use remaining space */
+            background-image: url('cafe.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Full height to prevent white space */
+        }
+
+        /* Orange Section Styling */
+        .orange-section {
+            width: 20%; /* Set fixed width */
+            background-color: #f19a57;
+            padding: 50px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .orange-section h2 {
+            font-size: 48px;
+            margin: 0;
+        }
+
+        .orange-section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            font-size: 18px;
+        }
+
+        .footer p {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Add logo image here -->
+        <img src="coffeelogo.jpg" alt="Kapeleng Logo" class="logo">
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Menu</a>
+            <a href="#">Cart</a>
+        </nav>
+    </div>
+
+    <!-- Main Content (Background Image) -->
+    <div class="main-content"></div>
+
+    <!-- Orange Section with Text -->
+    <div class="orange-section">
+        <div>
+            <h2>Welcome to Our Cafe!</h2>
+            <p>sjdflkdsjfdlksjfslkdjfdsiojfewoifnslkd.</p>
+        </div>
+        <div class="footer">
+            <p>We are open 7 days a week</p>
+            <p>8AM - 9PM</p>
+        </div>
+    </div>
+
+</body>
+</html>
