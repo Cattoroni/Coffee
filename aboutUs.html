@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Kapeleng</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            background-color: #1e2d45;
+            width: 20%; /* Set fixed width */
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Add a class for the logo */
+        .sidebar .logo {
+            width: 150px; /* Adjust the size as necessary */
+            margin-bottom: 30px;
+        }
+
+        .sidebar nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .sidebar nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 0;
+            font-size: 18px;
+        }
+
+        .sidebar .button {
+            background-color: #d97950;
+            padding: 10px 20px;
+            border: none;
+            color: white;
+            text-transform: uppercase;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .sidebar p {
+            text-align: center;
+        }
+
+        /* Main Content Styling */
+        .main-content {
+            flex-grow: 1; /* Use remaining space */
+            background-image: url('cafeinside.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Pop-up Styling */
+        .popup {
+            background-color: #f19a57; /* Opaque background */
+            width: 50%; /* Pop-up width */
+			padding: 0px 40px 0px 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
+            text-align: center;
+            border-radius: 10px;
+			color: white;
+			font-family: Georgia, serif;
+        }
+
+        .popup h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .popup p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Add logo image here -->
+        <img src="/images/kapeleng-logo.png" alt="Kapeleng Logo" class="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="aboutUs.html">About Us</a>
+            <a href="menu.html">Menu</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </div>
+
+    <!-- Main Content with Pop-up -->
+    <div class="main-content">
+        <div class="popup">
+            <h2>A Story of Connections and Coffee</h2>
+            <p>It all began in early 2023, as the world gradually embraced face-to-face interactions after the challenges of recent years due to COVID-19. in the heart of philippines, a small group of friends, united by their love for coffee, started by gathering in each other's homes, enjoying local cafes and sharing stories. These genuine moments of connection sparked an idea—a cafe that would not only serve coffee but also be a place where friendships could form, new connections bonds, and everyone, regardless of their background, could feel at home.<br><br>
+
+			Initially, it was just a dream shared over cups of kapeng barako and hand-pulled espresso, but these friends soon realized they had something truly special—a bond that went beyond simple business aspirations. They envisioned creating a space that felt like a second home, where coffee was more than just a drink—it was a way to bring people together.<br><br>
+
+			By combining their resources, skills, and creativity, they turned their dream into reality, and thus, Kapeleng was born! With a shared love for locally sourced beans, and sustainable practices, Kapeleng was crafted to celebrate the beauty of the Philippines while nurturing human bonds. Every piece of furniture, every corner of the space, and every cup of coffee brewed was created with love and intention all having meaning of each items behind it—deeply rooted in the friendships that made it all possible.<br><br>
+
+			It’s a place where regulars come to work, new friendships are sparked, and communities come together over a common love for coffee. We’re more than just a café—we’re a family. We believe that good coffee has the power to inspire deep conversations, create memories, and strengthen bonds.<br><br>
+
+			Welcome to Kapeleng, where each cup tells a story and every face is a new connection waiting to happen! </p><br><br>
+        </div>
+    </div>
+
+</body>
+</html>
