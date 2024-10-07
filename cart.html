@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Kapeleng</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            background-color: #f4f4f4;
+        }
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            height: 100vh;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Horizontally center */
+        }
+        .sidebar img {
+            width: 150px;
+            margin-bottom: 40px;
+            align-self: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        /* Main Content */
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            flex-grow: 1;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #333;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        .cart-item div {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .quantity {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+        .quantity input {
+            width: 50px;
+            text-align: center;
+            margin-left: 5px;
+            padding: 5px;
+            font-size: 16px;
+        }
+        .total {
+            margin-top: 20px;
+            font-size: 22px;
+        }
+        .checkout-btn {
+            background-color: #ff6600;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <img src="logo.png" alt="Kapeleng Logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h1>Your Cart</h1>
+
+        <!-- Coffee Section -->
+        <h2>Coffee</h2>
+        <!-- Americano -->
+        <div class="cart-item">
+            <div>
+                <h3>Americano</h3>
+                <div class="options">
+                    <div class="quantity">
+                        <label>12oz (₱70): </label>
+                        <input type="number" class="quantity-input" data-price="70" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>16oz (₱80): </label>
+                        <input type="number" class="quantity-input" data-price="80" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>22oz (₱90): </label>
+                        <input type="number" class="quantity-input" data-price="90" value="0" min="0" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cappuccino -->
+        <div class="cart-item">
+            <div>
+                <h3>Cappuccino</h3>
+                <div class="options">
+                    <div class="quantity">
+                        <label>12oz (₱80): </label>
+                        <input type="number" class="quantity-input" data-price="80" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>16oz (₱90): </label>
+                        <input type="number" class="quantity-input" data-price="90" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>22oz (₱100): </label>
+                        <input type="number" class="quantity-input" data-price="100" value="0" min="0" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- White Chocolate Mocha -->
+        <div class="cart-item">
+            <div>
+                <h3>White Chocolate Mocha</h3>
+                <div class="options">
+                    <div class="quantity">
+                        <label>12oz (₱80): </label>
+                        <input type="number" class="quantity-input" data-price="80" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>16oz (₱90): </label>
+                        <input type="number" class="quantity-input" data-price="90" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>22oz (₱100): </label>
+                        <input type="number" class="quantity-input" data-price="100" value="0" min="0" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Caramel Macchiato -->
+        <div class="cart-item">
+            <div>
+                <h3>Caramel Macchiato</h3>
+                <div class="options">
+                    <div class="quantity">
+                        <label>12oz (₱90): </label>
+                        <input type="number" class="quantity-input" data-price="90" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>16oz (₱100): </label>
+                        <input type="number" class="quantity-input" data-price="100" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>22oz (₱110): </label>
+                        <input type="number" class="quantity-input" data-price="110" value="0" min="0" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spanish Latte -->
+        <div class="cart-item">
+            <div>
+                <h3>Spanish Latte</h3>
+                <div class="options">
+                    <div class="quantity">
+                        <label>12oz (₱90): </label>
+                        <input type="number" class="quantity-input" data-price="90" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>16oz (₱100): </label>
+                        <input type="number" class="quantity-input" data-price="100" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>22oz (₱110): </label>
+                        <input type="number" class="quantity-input" data-price="110" value="0" min="0" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dirty Matcha -->
+        <div class="cart-item">
+            <div>
+                <h3>Dirty Matcha</h3>
+                <div class="options">
+                    <div class="quantity">
+                        <label>12oz (₱90): </label>
+                        <input type="number" class="quantity-input" data-price="90" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>16oz (₱100): </label>
+                        <input type="number" class="quantity-input" data-price="100" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>22oz (₱110): </label>
+                        <input type="number" class="quantity-input" data-price="110" value="0" min="0" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hazelnut Latte -->
+        <div class="cart-item">
+            <div>
+                <h3>Hazelnut Latte</h3>
+                <div class="options">
+                    <div class="quantity">
+                        <label>12oz (₱90): </label>
+                        <input type="number" class="quantity-input" data-price="80" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>16oz (₱100): </label>
+                        <input type="number" class="quantity-input" data-price="90" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>22oz (₱110): </label>
+                        <input type="number" class="quantity-input" data-price="100" value="0" min="0" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Non-Coffee Section -->
+        <h2>Non-Coffee</h2>
+        <!-- Strawberry Latte -->
+        <div class="cart-item">
+            <div>
+                <h3>Strawberry Latte</h3>
+                <div class="options">
+                    <div class="quantity">
+                        <label>12oz (₱90): </label>
+                        <input type="number" class="quantity-input" data-price="90" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>16oz (₱100): </label>
+                        <input type="number" class="quantity-input" data-price="100" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>22oz (₱110): </label>
+                        <input type="number" class="quantity-input" data-price="110" value="0" min="0" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Choco Latte -->
+        <div class="cart-item">
+            <div>
+                <h3>Choco Latte</h3>
+                <div class="options">
+                    <div class="quantity">
+                        <label>12oz (₱90): </label>
+                        <input type="number" class="quantity-input" data-price="80" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>16oz (₱100): </label>
+                        <input type="number" class="quantity-input" data-price="90" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>22oz (₱110): </label>
+                        <input type="number" class="quantity-input" data-price="100" value="0" min="0" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Matcha Latte -->
+        <div class="cart-item">
+            <div>
+                <h3>Matcha Latte</h3>
+                <div class="options">
+                    <div class="quantity">
+                        <label>12oz (₱100): </label>
+                        <input type="number" class="quantity-input" data-price="90" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>16oz (₱110): </label>
+                        <input type="number" class="quantity-input" data-price="100" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>22oz (₱120): </label>
+                        <input type="number" class="quantity-input" data-price="110" value="0" min="0" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dark Chocolate -->
+        <div class="cart-item">
+            <div>
+                <h3>Dark Chocolate</h3>
+                <div class="options">
+                    <div class="quantity">
+                        <label>12oz (₱90): </label>
+                        <input type="number" class="quantity-input" data-price="80" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>16oz (₱100): </label>
+                        <input type="number" class="quantity-input" data-price="90" value="0" min="0" max="10">
+                    </div>
+                    <div class="quantity">
+                        <label>22oz (₱110): </label>
+                        <input type="number" class="quantity-input" data-price="100" value="0" min="0" max="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Total and Checkout -->
+        <div class="total" id="totalPrice">
+            Total: ₱0
+        </div>
+        <button class="checkout-btn">Checkout</button>
+    </div>
+
+    <!-- JavaScript to handle the dynamic total calculation -->
+    <script>
+        const quantityInputs = document.querySelectorAll('.quantity-input');
+        const totalPriceElement = document.getElementById('totalPrice');
+
+        // Function to calculate and update the total price
+        function updateTotalPrice() {
+            let total = 0;
+
+            quantityInputs.forEach(input => {
+                const price = parseFloat(input.getAttribute('data-price'));
+                const quantity = parseInt(input.value);
+                total += price * quantity;
+            });
+
+            totalPriceElement.innerText = `Total: ₱${total}`;
+        }
+
+        // Add event listeners to each quantity input to recalculate the total price
+        quantityInputs.forEach(input => {
+            input.addEventListener('input', updateTotalPrice);
+        });
+    </script>
+</body>
+</html>
