@@ -24,6 +24,11 @@
             align-items: center;
         }
 
+        /* Add a class for the logo */
+        .sidebar a {
+            text-decoration: none; /* Remove underline from link */
+        }
+
         .sidebar .logo {
             width: 300px; 
             margin-bottom: 100px;
@@ -43,25 +48,10 @@
             font-size: 18px;
         }
 
-        .sidebar .button {
-            background-color: #d97950;
-            padding: 10px 20px;
-            border: none;
-            color: white;
-            text-transform: uppercase;
-            cursor: pointer;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .sidebar p {
-            text-align: center;
-        }
-
         /* Main Content Styling */
         .main-content {
             flex-grow: 1; /* Use remaining space */
-            background-image: url('cafemenuart.jpg'); /* Background image */
+            background-image: url('cafemenuart.jpg'); 
             background-size: cover;
             background-position: center;
             position: relative;
@@ -76,9 +66,9 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
-            border-radius: 10px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); 
             text-align: center;
+            border-radius: 10px;
         }
 
         .popup img {
@@ -92,10 +82,10 @@
 
     <!-- Sidebar -->
     <div class="sidebar">
-        <!-- logo image -->
+        <!-- Wrapped logo in an anchor tag to make it a link to the homepage -->
         <a href="index.html">
-			<img src="coffeelogo.jpg" alt="Kapeleng Logo">
-		</a>
+            <img src="coffeelogo.jpg" alt="Kapeleng Logo" class="logo">
+        </a>
         <nav>
             <a href="index.html">Home</a>
             <a href="aboutUs.html">About Us</a>
@@ -104,7 +94,7 @@
         </nav>
     </div>
 
-    <!-- Main Content with menu pop-up -->
+    <!-- Main Content with Image Pop-up -->
     <div class="main-content">
         <div class="popup">
             <img src="kapelengmenu.png" alt="Kapeleng Menu">
