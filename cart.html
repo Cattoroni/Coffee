@@ -368,7 +368,7 @@
         <button class="checkout-btn">Checkout</button>
     </div>
 
-    <!-- JavaScript to handle the dynamic total calculation -->
+    <!-- JavaScript to update the total -->
     <script>
         const quantityInputs = document.querySelectorAll('.quantity-input');
         const totalPriceElement = document.getElementById('totalPrice');
@@ -386,7 +386,7 @@
             totalPriceElement.innerText = `Total: ₱${total}`;
         }
 
-        // Add event listeners to each quantity input to recalculate the total price
+        // Added listeners for clicking quantities to update the total price
         quantityInputs.forEach(input => {
             input.addEventListener('input', updateTotalPrice);
         });
