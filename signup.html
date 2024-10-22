@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Kapeleng</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            background-image: url('signupArt.jpg'); /* Background image */
+            background-size: cover;
+            background-position: center;
+        }
+        /* Sidebar Styling */
+        .sidebar {
+            width: 250px;
+            background-color: #1e2d45; /* Sidebar color */
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; /* Center content horizontally */
+        }
+        .sidebar img {
+            width: 150px; /* Adjust logo size */
+            margin-bottom: 40px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            text-align: center; /* Center the menu items */
+        }
+        .sidebar ul li {
+            margin-bottom: 20px;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .signup-container {
+            background-color: rgba(150, 150, 150, 0.9); /* Gray with transparency */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 400px; /* Expanded width */
+            text-align: center;
+            margin: auto; /* Center the container */
+        }
+        .signup-container img {
+            width: 300px; /* Logo width */
+            height: 300px; /* Logo height */
+            margin-bottom: 20px;
+        }
+        .signup-container h2 {
+            margin-bottom: 20px;
+        }
+        .signup-container input {
+            width: calc(100% - 20px); /* Full width minus padding */
+            padding: 10px; /* Same padding as the button */
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px; /* Consistent font size */
+        }
+        .signup-container button {
+            width: 100%; /* Full width */
+            padding: 10px;
+            background-color: #ff6600; /* Button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px; /* Consistent font size */
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <a href="index.html">
+            <img src="coffeelogo.jpg" alt="Kapeleng Logo"> <!-- Sidebar Logo -->
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </div>
+
+    <!-- Sign Up Container -->
+    <div class="signup-container">
+        <img src="coffeelogo.jpg" alt="Kapeleng Logo"> <!-- Main Logo -->
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Last Name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password (8-20 characters)" required>
+        <button type="button" onclick="signUp()">Sign Up</button>
+    </div>
+
+    <script>
+        function signUp() {
+            // Display confirmation message
+            alert("You have successfully signed up!");
+            // Redirect to login page after signing up
+            window.location.href = "login.html"; // Redirect to the login page or homepage
+        }
+    </script>
+</body>
+</html>
