@@ -15,10 +15,25 @@
             display: flex;
             background-color: #f4f4f4;
         }
+        /* Top Bar */
+        .top-bar {
+            width: 100%;
+            height: 30px; /* Height adjusted */
+            background-color: #333; /* Same color as sidebar */
+            display: flex;
+            justify-content: flex-end; /* Align text to the right */
+            align-items: center;
+            color: white;
+            padding-right: 20px;
+            font-size: 15px; /* Font size adjusted */
+            position: fixed; /* Fixed position */
+            top: 0;
+            z-index: 1000; /* Ensure it stays above other content */
+        }
         /* Sidebar */
         .sidebar {
             width: 250px;
-            background-color: #333;
+            background-color: #333; /* Sidebar color */
             color: #fff;
             position: fixed;
             height: 100vh;
@@ -26,12 +41,12 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center; /* Horizontally center */
+            align-items: center; /* Center content horizontally */
+            top: 30px; /* Below the top bar */
         }
         .sidebar img {
-            width: 150px;
+            width: 150px; /* Logo size */
             margin-bottom: 40px;
-            align-self: center;
         }
         .sidebar ul {
             list-style: none;
@@ -47,9 +62,10 @@
         }
         /* Main Content */
         .content {
-            margin-left: 250px;
+            margin-left: 250px; /* Aligns main content next to sidebar */
             padding: 20px;
             flex-grow: 1;
+            margin-top: 60px; /* Space for top bar */
         }
         h1 {
             margin-bottom: 20px;
@@ -89,7 +105,7 @@
             margin-right: 20px;
         }
         .quantity input {
-            width: 50px;
+            width: 50px; /* Set input box size */
             text-align: center;
             margin-left: 5px;
             padding: 5px;
@@ -100,7 +116,7 @@
             font-size: 22px;
         }
         .checkout-btn {
-            background-color: #ff6600;
+            background-color: #ff6600; /* Button color */
             color: white;
             padding: 10px 20px;
             border: none;
@@ -111,11 +127,18 @@
     </style>
 </head>
 <body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="log-in-text">
+            <a href="login.html" style="color: white; text-decoration: none;">Log In</a>
+        </div>
+    </div>
+
     <!-- Sidebar -->
     <div class="sidebar">
-		<a href="index.html">
-			<img src="coffeelogo.jpg" alt="Kapeleng Logo">
-		</a>
+        <a href="index.html">
+            <img src="coffeelogo.jpg" alt="Kapeleng Logo"> <!-- Sidebar Logo -->
+        </a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutUs.html">About Us</a></li>
@@ -388,7 +411,7 @@
             totalPriceElement.innerText = `Total: ₱${total}`;
         }
 
-        // Added listeners for clicking quantities to update the total price
+        // Add event listeners to each quantity input to recalculate the total price
         quantityInputs.forEach(input => {
             input.addEventListener('input', updateTotalPrice);
         });

@@ -11,11 +11,32 @@
             display: flex;
             height: 100vh; /* Full viewport height */
         }
+		
+		/* Top Bar */
+        .top-bar {
+            width: 100%;
+            height: 30px; /* Height set to 30 pixels */
+            background-color: #1e2d45; /* Same color as sidebar */
+            display: flex;
+            justify-content: flex-end; /* Align text to the right */
+            align-items: center;
+            color: white;
+            padding-right: 20px; /* Original padding */
+            font-size: 15px; /* Font size set to 15 pixels */
+            position: fixed; /* Fixed position */
+            top: 0;
+            z-index: 1000; /* Ensure it stays above other content */
+        }
 
+        /* Log In Text */
+        .log-in-text {
+            margin-right: 40px; /* Move the text 40 pixels from the right */
+        }
+		
         /* Sidebar Styling */
         .sidebar {
             background-color: #1e2d45;
-            width: 20%; /* Set fixed width */
+            width: 14%; /* Set fixed width */
             color: white;
             padding: 20px;
             display: flex;
@@ -67,11 +88,12 @@
             position: relative;
         }
 
-        /* Pop-up Styling */
+        /* Pop-up About Us Styling */
         .popup {
             background-color: #f19a57; /* Opaque background */
             width: 50%; /* Pop-up width */
-			padding: 0px 40px 0px 40px;
+			height: 90%;
+            padding: 0px 40px 0px 40px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -79,8 +101,8 @@
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Add a soft shadow */
             text-align: center;
             border-radius: 10px;
-			color: white;
-			font-family: Georgia, serif;
+            color: white;
+            font-family: Georgia, serif;
         }
 
         .popup h2 {
@@ -95,6 +117,13 @@
     </style>
 </head>
 <body>
+
+	<!-- Top Bar -->
+    <div class="top-bar">
+        <div class="log-in-text">
+            <a href="login.html" style="color: white; text-decoration: none;">Log In</a>
+        </div>
+    </div>
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -116,13 +145,13 @@
             <h2>A Story of Connections and Coffee</h2>
             <p>It all began in early 2023, as the world gradually embraced face-to-face interactions after the challenges of recent years due to COVID-19. in the heart of philippines, a small group of friends, united by their love for coffee, started by gathering in each other's homes, enjoying local cafes and sharing stories. These genuine moments of connection sparked an idea—a cafe that would not only serve coffee but also be a place where friendships could form, new connections bonds, and everyone, regardless of their background, could feel at home.<br><br>
 
-			Initially, it was just a dream shared over cups of kapeng barako and hand-pulled espresso, but these friends soon realized they had something truly special—a bond that went beyond simple business aspirations. They envisioned creating a space that felt like a second home, where coffee was more than just a drink—it was a way to bring people together.<br><br>
+            Initially, it was just a dream shared over cups of kapeng barako and hand-pulled espresso, but these friends soon realized they had something truly special—a bond that went beyond simple business aspirations. They envisioned creating a space that felt like a second home, where coffee was more than just a drink—it was a way to bring people together.<br><br>
 
-			By combining their resources, skills, and creativity, they turned their dream into reality, and thus, Kapeleng was born! With a shared love for locally sourced beans, and sustainable practices, Kapeleng was crafted to celebrate the beauty of the Philippines while nurturing human bonds. Every piece of furniture, every corner of the space, and every cup of coffee brewed was created with love and intention all having meaning of each items behind it—deeply rooted in the friendships that made it all possible.<br><br>
+            By combining their resources, skills, and creativity, they turned their dream into reality, and thus, Kapeleng was born! With a shared love for locally sourced beans, and sustainable practices, Kapeleng was crafted to celebrate the beauty of the Philippines while nurturing human bonds. Every piece of furniture, every corner of the space, and every cup of coffee brewed was created with love and intention all having meaning of each items behind it—deeply rooted in the friendships that made it all possible.<br><br>
 
-			It’s a place where regulars come to work, new friendships are sparked, and communities come together over a common love for coffee. We’re more than just a café—we’re a family. We believe that good coffee has the power to inspire deep conversations, create memories, and strengthen bonds.<br><br>
+            It’s a place where regulars come to work, new friendships are sparked, and communities come together over a common love for coffee. We’re more than just a café—we’re a family. We believe that good coffee has the power to inspire deep conversations, create memories, and strengthen bonds.<br><br>
 
-			Welcome to Kapeleng, where each cup tells a story and every face is a new connection waiting to happen! </p><br><br>
+            Welcome to Kapeleng, where each cup tells a story and every face is a new connection waiting to happen! </p><br><br>
         </div>
     </div>
 

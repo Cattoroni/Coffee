@@ -12,16 +12,45 @@
             height: 100vh; /* Full viewport height */
         }
 
+		/* Top Bar */
+        .top-bar {
+            width: 100%;
+            height: 30px; /* Height set to 30 pixels */
+            background-color: #1e2d45; /* Same color as sidebar */
+            display: flex;
+            justify-content: flex-end; /* Align text to the right */
+            align-items: center;
+            color: white;
+            padding-right: 20px; /* Original padding */
+            font-size: 15px; /* Font size set to 15 pixels */
+            position: fixed; /* Fixed position */
+            top: 0;
+            z-index: 1000; /* Ensure it stays above other content */
+        }
+
+        /* Log In Text */
+        .log-in-text {
+            margin-right: 40px; /* Move the text 40 pixels from the right */
+        }
+
         /* Sidebar Styling */
         .sidebar {
             background-color: #1e2d45;
-            width: 20%; /* Set fixed width */
+            width: 14%; /* Set fixed width */
             color: white;
             padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            position: fixed; /* Make sidebar fixed */
+            top: 30px; /* Below the top bar */
+            height: calc(100vh - 30px); /* Adjust height for top bar */
+        }
+
+        /* Add a class for the logo */
+        .sidebar a {
+            text-decoration: none; /* Remove underline from link */
         }
 
         .sidebar .logo {
@@ -43,21 +72,6 @@
             font-size: 18px;
         }
 
-        .sidebar .button {
-            background-color: #d97950;
-            padding: 10px 20px;
-            border: none;
-            color: white;
-            text-transform: uppercase;
-            cursor: pointer;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .sidebar p {
-            text-align: center;
-        }
-
         /* Main Content Styling */
         .main-content {
             flex-grow: 1; /* Use remaining space */
@@ -69,7 +83,7 @@
 
         /* Orange Section Styling */
         .orange-section {
-            width: 20%; /* Set fixed width */
+            width: 16%; /* Set fixed width */
             background-color: #f19a57;
             padding: 50px;
             color: white;
@@ -100,6 +114,13 @@
 </head>
 <body>
 
+	<!-- Top Bar -->
+    <div class="top-bar">
+        <div class="log-in-text">
+            <a href="login.html" style="color: white; text-decoration: none;">Log In</a>
+        </div>
+    </div>
+
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- logo image -->
@@ -121,7 +142,7 @@
     <div class="orange-section">
         <div>
             <h2>Welcome to Our Cafe!</h2><br><br><br><br>
-            <p>Welcome to Kapeleng, where coffee brings people together—even if you're on your own.<br><br>
+            <p>Welcome to Kapeleng, where coffee brings people together — even if you're on your own.<br><br>
 
 			   We believe every visit is a chance to connect, whether with others or simply with yourself. Our café is a cozy space where friendships are built, conversations flow, and everyone feels at home. Even if you’re here alone, a cup of coffee can make you feel like you're never truly by yourself.<br><br>
 
