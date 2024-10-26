@@ -162,8 +162,8 @@
     <div class="signup-container">
         <img src="coffeelogo.jpg" alt="Kapeleng Logo">
         <h2>Sign Up</h2>
-        <input type="text" id="firstName" placeholder="First Name" required>
-        <input type="text" id="lastName" placeholder="Last Name" required>
+        <input type="text" id="firstName" placeholder="First Name" required onkeypress="return onlyLetters(event)">
+        <input type="text" id="lastName" placeholder="Last Name" required onkeypress="return onlyLetters(event)">
         <input type="email" id="email" placeholder="Email" required>
         <input type="password" id="password" placeholder="Password (8-20 characters)" required>
         <button type="button" onclick="signUp()">Sign Up</button>
@@ -230,6 +230,15 @@
             // Simple email validation regex
             const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return re.test(email);
+        }
+
+        // Allow only letters in the first and last name fields
+        function onlyLetters(event) {
+            const char = String.fromCharCode(event.which);
+            const regex = /^[a-zA-Z\s]*$/;
+            if (!regex.test(char)) {
+                event.preventDefault();
+            }
         }
 
         // Trigger sign up on pressing Enter key
