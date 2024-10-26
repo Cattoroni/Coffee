@@ -184,12 +184,12 @@
             const password = document.getElementById('password').value;
 
             // Validate input fields
-            if (!firstName) {
-                showNotification("Please fill in the First Name.");
+            if (!firstName || !/^[a-zA-Z\s]+$/.test(firstName)) {
+                showNotification("Please fill in a valid First Name (letters only).");
                 return;
             }
-            if (!lastName) {
-                showNotification("Please fill in the Last Name.");
+            if (!lastName || !/^[a-zA-Z\s]+$/.test(lastName)) {
+                showNotification("Please fill in a valid Last Name (letters only).");
                 return;
             }
             if (!email || !validateEmail(email)) {
