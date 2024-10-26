@@ -172,7 +172,7 @@
     <!-- Notification Popup -->
     <div class="notification-popup" id="notificationPopup">
         <p id="notificationMessage">You have successfully signed up!</p>
-        <button onclick="closePopup()">Close</button>
+        <button id="closeButton" onclick="closePopup()">Close</button>
     </div>
 
     <script>
@@ -219,8 +219,11 @@
         function closePopup() {
             // Hide the notification popup
             document.getElementById('notificationPopup').style.display = 'none';
-            // Redirect to the login page
-            window.location.href = "login.html"; // Redirect to login page
+            // Check if the message was a success notification
+            if (document.getElementById('notificationMessage').innerText === "You have successfully signed up!") {
+                // Redirect to the login page
+                window.location.href = "login.html"; // Redirect to login page
+            }
         }
 
         function validateEmail(email) {
